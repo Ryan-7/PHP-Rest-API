@@ -5,7 +5,7 @@ Uses the `fetch()` API to hit the backend and ES6 for rendering the view.
 
 # Setup
 Currently the API will only read from the database and output on the client. 
-Create a local DB and add a few items for title, body and id. 
+Create a local DB `todo` and add a few `items` for title, body and id. 
 Make sure to set `connectedToDb` to true.
 
 Or
