@@ -8,7 +8,7 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Todo App</a>
+                <a class="navbar-brand" href="client.php">Todo App</a>
             </div>
         </div>
     </nav>
