@@ -1,7 +1,7 @@
 # PHP-Rest-API
 Todo app with a framework-less PHP Rest API on backend.
 
-Uses the `fetch()` API to hit the backend and ES6 for rendering the view.
+Uses the `fetch()` API to hit the backend and `ES6` for rendering the view and `Bootstrap` CSS framework.
 
 # Setup
 Currently the API will only read from the database and output on the client. 
