@@ -14,9 +14,9 @@ Keep `connectedToDb` set to `false`.
 The client will render with mock data if no db in use.
 
 # Up next
-API:  Add and Delete
+API:  Add item, error handling
 
-Client: Form to add item, hook up delete button
+Client: add item method, error handling
 
 
 ![alt text](https://i.imgur.com/0BLf5FX.png)
