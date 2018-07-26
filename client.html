@@ -8,7 +8,7 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Todo App</a>
+                <a class="navbar-brand" href="index.html">Todo App</a>
             </div>
         </div>
     </nav>
@@ -19,13 +19,13 @@
                 <form>
                     <div class="form-group">
                         <label for="text">Title</label>
-                        <input type="" class="form-control" id="title">
+                        <input type="text" class="form-control" id="title">
                     </div>
                     <div class="form-group">
                         <label for="body">Notes</label>
                         <textarea type="text" class="form-control" id="body"></textarea>
                     </div>
-                    <button class="btn btn-default">Add Todo</button>
+                    <input type="button" class="btn btn-default" onclick="addItem(this)" value="Add Todo">
                 </form>
             </div>
         </div>
@@ -41,7 +41,6 @@
         
     const connectedToDb = false; // Change to true if running local DB 
     const todoList = document.getElementById('todo-list');
-
 
     const mockData = [
         {
@@ -79,7 +78,10 @@
     }
 
     const addItem = () => {
-        console.log('item added');
+        let title = document.getElementById('title').value;
+        let body = document.getElementById('body').value;
+        console.log(title);
+        console.log(body);
     }
 
     // Hit API for Data if running a local DB
