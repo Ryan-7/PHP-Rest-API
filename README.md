@@ -1,7 +1,7 @@
 # PHP-Rest-API
 A simple Single Page Application using framework-less JavaScript client and framework-less PHP API.
 
-Uses the `fetch()` API to hit the backend and `ES6` for rendering the view and `Bootstrap` CSS framework.
+Browser API `fetch()` for requests and `ES6` for rendering the view and `Bootstrap` CSS framework.
 
 # Setup
 Currently the API will read and delete items from the client side. 
