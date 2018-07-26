@@ -1,5 +1,5 @@
 # PHP-Rest-API
-Todo app with a framework-less PHP Rest API on backend.
+A simple Single Page Application using framework-less JavaScript client and framework-less PHP API.
 
 Uses the `fetch()` API to hit the backend and `ES6` for rendering the view and `Bootstrap` CSS framework.
 
