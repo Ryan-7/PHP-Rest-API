@@ -39,7 +39,7 @@
 <script>
 
         
-    const connectedToDb = false; // Change to true if running local DB 
+    const connectedToDb = true; // Change to true if running local DB 
     const todoList = document.getElementById('todo-list');
 
     const mockData = [
@@ -61,6 +61,7 @@
     ]
 
     const renderView = (data) => {
+        todoList.innerHTML = ''; // Since we're appending, clear before fresh render.
         data.forEach((item) => {
             todoList.innerHTML += `
                 <li class="list-group-item">
@@ -74,7 +75,13 @@
     }
 
     const deleteItem = (id) => {
-        console.log(id);
+        fetch(`API/todo/remove.php?id=${id}`)
+        .then((response) => {
+            return response.json();
+        })
+        .then((response) => {
+            renderView(response);
+        });
     }
 
     const addItem = () => {

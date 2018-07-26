@@ -22,4 +22,10 @@ class Todo {
         $stmt->execute();
         return $stmt;
     }
+
+    public function removeTodo($id) {
+        $query = 'DELETE FROM items WHERE id = :id';
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute(['id' => $id]);
+    }
 }
