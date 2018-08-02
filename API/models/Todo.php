@@ -28,4 +28,10 @@ class Todo {
         $stmt = $this->connection->prepare($query);
         $stmt->execute(['id' => $id]);
     }
+
+    public function addTodo($title, $body) {
+        $query = 'INSERT INTO items (title , body) VALUES (:title, :body)';
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute(['title' => $title, 'body' => $body]);
+    }
 }

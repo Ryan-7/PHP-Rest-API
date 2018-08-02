@@ -13,8 +13,11 @@
 
     $todo = new Todo($db);
 
-    
-    // WIP
-    
     $content = file_get_contents("php://input");
-    echo $content;
+    $trimData = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $content); // Something clientside might be messing with the JSON string..?
+    $decoded = json_decode($trimData, true);
+    
+    $todo->addTodo($decoded['title'], $decoded['body']);
+
+    $result = $todo->getTodos();
+    echo json_encode($result->fetchAll(PDO::FETCH_OBJ));

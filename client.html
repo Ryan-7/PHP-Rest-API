@@ -104,7 +104,9 @@
                 body: JSON.stringify({title: title, body: body})
             });
             const res = await response.json();
-            console.log(res);
+            renderView(res);
+            document.getElementById('title').value = '';
+            document.getElementById('body').value = '';
         })();
     }
 
